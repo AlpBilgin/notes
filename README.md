@@ -2,6 +2,12 @@
 
 ## Git
 
+### From MAN pages
+
+1
+
+git config --list --show-origin makes a list of all git settings active in a folder and where they come from. 
+
 ### From https://opensource.com/article/18/4/git-tips
 
 1
