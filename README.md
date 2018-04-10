@@ -43,3 +43,9 @@ You can also use these date-based revision arguments with any Git subcommand tha
 Have you ever rebased away a commit, then discovered there was something in that commit you wanted to keep? You may have thought that information was lost forever and would need to be recreated. But if you committed it in your local working copy, it was added to the reference log (reflog), and you should still be able to access it.
 
 Running git reflog will show you a list of all the activity for the current branch in your local working copy and also give you the SHA1 of each commit. Once you've found the commit you rebased away, you can run git checkout <SHA1> to check out that commit, copy any information you need, and run git checkout HEAD to return to the most recent commit in the branch.
+
+### From http://365git.tumblr.com/
+
+1
+
+add a new .gitignore file in an empty directory to commit it while ignoring the contents
