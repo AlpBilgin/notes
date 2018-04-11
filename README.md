@@ -55,3 +55,13 @@ Running git reflog will show you a list of all the activity for the current bran
 1
 
 add a new .gitignore file in an empty directory to commit it while ignoring the contents
+
+## macOS
+
+### From SO
+
+1
+
+show hidden: Just adding the key to the global domain seems to work:
+`defaults write -g AppleShowAllFiles -bool true`
+You have to quit and reopen applications to apply changes as usual.
