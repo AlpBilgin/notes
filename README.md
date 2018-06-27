@@ -65,3 +65,19 @@ add a new .gitignore file in an empty directory to commit it while ignoring the 
 show hidden: Just adding the key to the global domain seems to work:
 `defaults write -g AppleShowAllFiles -bool true`
 You have to quit and reopen applications to apply changes as usual.
+
+## Node.JS
+
+### From Docu
+
+1
+
+avoid npm permission errors that come with running everything in sudo.
+
+https://docs.npmjs.com/getting-started/fixing-npm-permissions
+
+2
+
+Avoid npm itself
+
+https://www.npmjs.com/package/pnpm
