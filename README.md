@@ -1,5 +1,22 @@
 # notes
 
+## New install breadcrumbs
+
+Read sibling sections for tips on the listed tools
+
+### Terminal Emulator
+
+NTFS: cmder vanilla
+Posix: zsh + oh-my-zsh powerlevel9k theme
+
+### Node
+
+point npm global folder to a user dir. Then install pnpm. Then use pnpm to install n. Use npm only when switching to an older node with n breaks pnpm.
+
+### Python
+
+Read up again on the python package that exposes different versions per project.
+
 ## Git
 
 ### From MAN pages
