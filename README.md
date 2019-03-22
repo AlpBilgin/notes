@@ -15,7 +15,7 @@ point npm global folder to a user dir. Then install pnpm. Then use pnpm to insta
 
 node-gyp python 2.7 istiyor onu kur
 
-MSB error=> npm config set msvs_version 2017 --global
+MSB error=>  https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017 ; npm config set msvs_version 2017 --global
 
 ### Python
 
