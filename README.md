@@ -13,6 +13,10 @@ Posix: zsh + oh-my-zsh powerlevel9k theme
 
 point npm global folder to a user dir. Then install pnpm. Then use pnpm to install n. Use npm only when switching to an older node with n breaks pnpm.
 
+node-gyp python 2.7 istiyor onu kur
+
+MSB error=> npm config set msvs_version 2017 --global
+
 ### Python
 
 Read up again on the python package that exposes different versions per project.
