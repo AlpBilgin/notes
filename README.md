@@ -102,3 +102,29 @@ https://docs.npmjs.com/getting-started/fixing-npm-permissions
 Avoid npm itself
 
 https://www.npmjs.com/package/pnpm
+
+## Docker
+
+### backup and restore folders in volumes
+
+Volume Backup Tip:
+
+in the same folder as dockerfile
+>docker run --rm --volumes-from <running docker container id> -v $(pwd):/backup ubuntu tar cvf /backup/<backup tar file name> /<folder in container to backup>
+
+this command will start a new container that has access to the volumes of the indicated container
+
+-v $(pwd):/backup ubuntu => this will create a /backup folder in the new container that is mapped to $(pwd) in real filesystem
+
+tar cvf /backup/<backup tar file name> /<folder in container to backup> => this command will run in the container and will indireclty cause the tar file to appear in $(pwd)
+
+
+>docker run --rm --volumes-from <running docker container id> -v $(pwd):/backup ubuntu bash -c "cd /<folder in container to restore> && tar xvf /backup/<backup tar file name> --strip 1"
+
+this command will start a new container that has access to the volumes of the indicated container
+
+-v $(pwd):/backup ubuntu => this will create a /backup folder in the new container that is mapped to $(pwd) in real filesystem
+
+bash -c "cd /<folder in container to restore> && tar xvf /backup/<backup tar file name> --strip 1" => this will extract the tarfile into some folder. Hopefully the same folder as above
+  
+## XCODEBUILD
