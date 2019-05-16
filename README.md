@@ -128,3 +128,7 @@ this command will start a new container that has access to the volumes of the in
 bash -c "cd /<folder in container to restore> && tar xvf /backup/<backup tar file name> --strip 1" => this will extract the tarfile into some folder. Hopefully the same folder as above
   
 ## XCODEBUILD
+
+### example cli invocation to build for simulator
+xcodebuild -derivedDataPath <some path> -workspace '<filename>.xcworkspace' -scheme '<one single scheme>' \
+-sdk iphonesimulator12.1 -arch x86_64 clean build;
