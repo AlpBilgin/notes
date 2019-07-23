@@ -145,3 +145,22 @@ instruments -s devices
 
 ### official ref for simulator
 https://help.apple.com/simulator/mac/current/#/
+
+
+## QA Solutions
+
+### Intelligent test scripter
+https://github.com/CognizantQAHub/Cognizant-Intelligent-Test-Scripter
+
+### Arjuna
+https://github.com/test-mile/arjuna
+
+### Testlink
+
+#### tarball
+https://sourceforge.net/projects/testlink/files/latest/download?source=files
+#### Container
+https://bitnami.com/stack/testlink
+#### Docu
+https://www.softwaretestinghelp.com/testlink-tutorial-1/
+http://testlink.sourceforge.net/docs/documents/end-users/manual.html
