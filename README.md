@@ -139,3 +139,6 @@ xcode-select -p
 /Applications/Xcode-7.2.app/Contents/Developer
 This will programmatically set the path to use:
 sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+
+### list available simulators
+instruments -s devices
