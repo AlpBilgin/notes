@@ -142,3 +142,6 @@ sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 
 ### list available simulators
 instruments -s devices
+
+### official ref for simulator
+https://help.apple.com/simulator/mac/current/#/
