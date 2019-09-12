@@ -77,6 +77,12 @@ Running git reflog will show you a list of all the activity for the current bran
 
 add a new .gitignore file in an empty directory to commit it while ignoring the contents
 
+### From https://devops.stackexchange.com/questions/1325/jenkins-shows-the-job-as-failed-if-there-is-nothing-to-commit-to-gitlab
+
+git diff-index --quiet HEAD || git commit -m "Jenkins automatic update commit"
+
+second command is only reached if first command spits out a difference
+
 ## macOS
 
 ### From SO
