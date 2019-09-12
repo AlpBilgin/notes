@@ -164,3 +164,10 @@ https://bitnami.com/stack/testlink
 #### Docu
 https://www.softwaretestinghelp.com/testlink-tutorial-1/
 http://testlink.sourceforge.net/docs/documents/end-users/manual.html
+
+
+## BASH
+
+### print status code of last command
+
+echo $?
