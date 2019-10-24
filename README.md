@@ -181,8 +181,8 @@ https://docs.bitnami.com/installer/apps/testlink/configuration/configure-smtp/
 - edit values
 - save and exit editor, exit shell, docker-compose down, docker-compose up -d
 - check website to see if it still works
-- docker run --rm --volumes-from bitnami-docker-testlink_mariadb_1 -v $(pwd):/backup ubuntu tar cvf /backup/mariadb_backup.tar /bitnami, docker run --rm --volumes-from bitnami-docker-testlink_testlink_1 -v $(pwd):/backup ubuntu tar cvf /backup/testlink_backup.tar /bitnami => will extract backups
-- docker run --rm --volumes-from bitnami-docker-testlink_testlink_1 -v $(pwd):/backup ubuntu bash -c "cd /bitnami && tar xvf /backup/testlink_backup.tar --strip 1", docker run --rm --volumes-from bitnami-docker-testlink_mariadb_1 -v $(pwd):/backup ubuntu bash -c "cd /bitnami && tar xvf /backup/mariadb_backup.tar --strip 1" => will reapply backups
+- ```docker run --rm --volumes-from bitnami-docker-testlink_mariadb_1 -v $(pwd):/backup ubuntu tar cvf /backup/mariadb_backup.tar /bitnami``` AND ```docker run --rm --volumes-from bitnami-docker-testlink_testlink_1 -v $(pwd):/backup ubuntu tar cvf /backup/testlink_backup.tar /bitnami``` => will extract backups
+- ```docker run --rm --volumes-from bitnami-docker-testlink_testlink_1 -v $(pwd):/backup ubuntu bash -c "cd /bitnami && tar xvf /backup/testlink_backup.tar --strip 1"``` AND ```docker run --rm --volumes-from bitnami-docker-testlink_mariadb_1 -v $(pwd):/backup ubuntu bash -c "cd /bitnami && tar xvf /backup/mariadb_backup.tar --strip 1"``` => will reapply backups
 -docker-compose down, docker-compose up -d
 - check website to see if it still works
 
