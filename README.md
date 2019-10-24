@@ -47,7 +47,7 @@ The --graph option adds the graph to the left side of the log, --abbrev-commit s
 
 3
 
-One of the hazards with force pushes happens when somebody else has made changes on top of the same branch in the remote copy of the repository. When you force-push your rewritten history, those commits will be lost. This is where `git push --force-with-lease` comes in—it will not allow you to force-push if the remote branch has been updated, which will ensure you don't throw away someone else's work.
+One of the hazards with force pushes happens when somebody else has made changes on top of the same branch in the remote copy of the repository. When you force-push your rewritten history, those commits will be lost. This is where `git push --force-with-lease` comes in—it will not allow you to force-push if the remote branch has been updated, which will ensure you don't overwrite  someone else's work.
 
 4
 
@@ -167,10 +167,24 @@ https://github.com/test-mile/arjuna
 https://sourceforge.net/projects/testlink/files/latest/download?source=files
 #### Container
 https://bitnami.com/stack/testlink
+https://github.com/bitnami/bitnami-docker-testlink
 #### Docu
 https://www.softwaretestinghelp.com/testlink-tutorial-1/
 http://testlink.sourceforge.net/docs/documents/end-users/manual.html
-
+https://docs.bitnami.com/installer/apps/testlink/configuration/configure-smtp/
+#### actionable tips
+- SSH into server
+- use "docker ps" to find out the proper container id
+- use "docker exec -it <mycontainerid> bash" to bash into the container
+- goto /bitnami/testlink edit custom_config.inc.php
+- use "apt-get install nano" to download a temporary shell editor if there isn't any (vim, ed etc are also okay)
+- edit values
+- save and exit editor, exit shell, docker-compose down, docker-compose up -d
+- check website to see if it still works
+- docker run --rm --volumes-from bitnami-docker-testlink_mariadb_1 -v $(pwd):/backup ubuntu tar cvf /backup/mariadb_backup.tar /bitnami, docker run --rm --volumes-from bitnami-docker-testlink_testlink_1 -v $(pwd):/backup ubuntu tar cvf /backup/testlink_backup.tar /bitnami => will extract backups
+- docker run --rm --volumes-from bitnami-docker-testlink_testlink_1 -v $(pwd):/backup ubuntu bash -c "cd /bitnami && tar xvf /backup/testlink_backup.tar --strip 1", docker run --rm --volumes-from bitnami-docker-testlink_mariadb_1 -v $(pwd):/backup ubuntu bash -c "cd /bitnami && tar xvf /backup/mariadb_backup.tar --strip 1" => will reapply backups
+-docker-compose down, docker-compose up -d
+- check website to see if it still works
 
 ## BASH
 
