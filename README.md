@@ -10,10 +10,15 @@ NTFS: cmder vanilla
 Posix: zsh + oh-my-zsh powerlevel9k theme
 
 ### Node
-
-point npm global folder to a user dir. Then install pnpm. Then use pnpm to install n. Use npm only when switching to an older node with n breaks pnpm.
-
-node-gyp python 2.7 istiyor onu kur
+ 1
+ `npm prefix -g` to see current global install prefix
+ `mkdir ~/.npm-global` to create a new root for global node_modules
+ `npm config set prefix '~/.npm-global'` to set it as new global install prefix
+ export it to environment `export PATH=~/.npm-global/bin:$PATH`
+ 2
+ install pnpm. Then use pnpm to install n. Use npm only when switching to an older node where n breaks pnpm.
+3
+node-gyp needs python 2.7 somewhere in the environment
 
 MSB error=>  https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017 ; npm config set msvs_version 2017 --global
 
