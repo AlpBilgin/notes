@@ -196,3 +196,9 @@ https://docs.bitnami.com/installer/apps/testlink/configuration/configure-smtp/
 ### print status code of last command
 
 echo $?
+
+## Spring boot
+
+Override default test properties through a side channel.
+
+https://www.baeldung.com/spring-test-property-source
