@@ -26,6 +26,16 @@ MSB error=>  https://visualstudio.microsoft.com/downloads/#build-tools-for-visua
 
 Read up again on the python package that exposes different versions per project.
 
+### Git
+1 setup identity
+
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+
+2 make a given executable the default for commit mesages
+
+git config --global core.editor "nano" 
+
 ## macOS
 
 ### From SO
@@ -130,6 +140,10 @@ https://docs.bitnami.com/installer/apps/testlink/configuration/configure-smtp/
 - check website to see if it still works
 
 ## BASH
+
+### Print active shell interpreter
+
+echo $0
 
 ### print status code of last command
 
