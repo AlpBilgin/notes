@@ -32,7 +32,11 @@ Read up again on the python package that exposes different versions per project.
 
 1
 
-git config --list --show-origin makes a list of all git settings active in a folder and where they come from. 
+git config --list --show-origin makes a list of all git settings active in a folder and where they come from.
+
+2
+
+git config --global core.editor "nano" make a given executable the default for commit mesages
 
 ### From https://opensource.com/article/18/4/git-tips
 
