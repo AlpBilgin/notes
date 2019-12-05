@@ -141,7 +141,7 @@ https://docs.bitnami.com/installer/apps/testlink/configuration/configure-smtp/
 
 ## BASH
 
-### Print active shell interpreter
+### Print active shell interpreter in a terminal window with name of current process placeholder $0
 
 echo $0
 
