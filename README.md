@@ -9,7 +9,7 @@ Read sibling sections for tips on the listed tools
 NTFS: cmder vanilla
 Posix: zsh + oh-my-zsh powerlevel9k theme
 
-### Node
+### Node-npm
  1
  `npm prefix -g` to see current global install prefix
  `mkdir ~/.npm-global` to create a new root for global node_modules
@@ -48,31 +48,11 @@ You have to quit and reopen applications to apply changes as usual.
 
 ## Node.JS
 
-### From Docu
+### peripherals
 
 1
 
-avoid npm permission errors that come with running everything in sudo.
-
-https://docs.npmjs.com/getting-started/fixing-npm-permissions
-
-On the command line, in your home directory, create a directory for global installations:
-
- mkdir ~/.npm-global
-
-Configure npm to use the new directory path:
-
- npm config set prefix '~/.npm-global'
-
-In your preferred text editor, open or create a ~/.profile file and add this line:
-
- export PATH=~/.npm-global/bin:$PATH
-
-
-
-2
-
-Avoid npm itself
+Avoid npm:
 
 https://www.npmjs.com/package/pnpm
 
