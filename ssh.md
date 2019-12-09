@@ -4,8 +4,10 @@
 
 ## MacOS
 
-/private/etc/ssh/ is where you find the important OS wide settings
-/private/etc/ssh/sshd_cinfig is where host settings are kept
+- /private/etc/ssh/ is where you find the important OS wide settings
+- /private/etc/ssh/sshd_cinfig is where host settings are kept
+- /var/empty should be empty
+- assuming environment is broken enough that sshd is not running: $(which sshd) -d will try to start sshd and give you a debug trace.
 
 # Client Side
 
