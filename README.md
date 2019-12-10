@@ -82,6 +82,9 @@ bash -c "cd /<folder in container to restore> && tar xvf /backup/<backup tar fil
   
 ## XCODE
 
+### pick an Xcode version
+https://xcodereleases.com/
+
 ### example cli invocation to build for simulator
 xcodebuild -derivedDataPath <some path> -workspace '<filename>.xcworkspace' -scheme '<one single scheme>' \
 -sdk iphonesimulator12.1 -arch x86_64 clean build;
