@@ -16,4 +16,11 @@
 ###generate new key, github default
 
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-id_rsa.pub is the password to send to servers
+id_rsa.pub is the password to register with servers
+
+###when working with bare metal serversprogrammatically send your ssh key
+
+ssh-copy-id -i ~/.ssh/id_rsa.pub username@serverurl
+
+this utility needs a way to auth an ssh tunnel.
+
