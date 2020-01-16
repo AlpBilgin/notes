@@ -91,3 +91,8 @@ adb -s emulator-5554 emu kill
 #### start-up with a clean memory
 
 emulator @Nexus_5X_API_28 -wipe-data 
+
+#### to get a list of available devices
+>$~/Library/Android/sdk/tools/emulator -list-avds
+#### this should take a string selected from the output of the command above
+>$~/Library/Android/sdk/tools/emulator -avd <avdName>
