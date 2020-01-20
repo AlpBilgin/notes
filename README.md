@@ -46,6 +46,19 @@ show hidden: Just adding the key to the global domain seems to work:
 `defaults write -g AppleShowAllFiles -bool true`
 You have to quit and reopen applications to apply changes as usual.
 
+2
+
+To start screensharing:
+
+`sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.screensharing.plist`
+
+To stop:
+
+`sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.screensharing.plist`
+
+The -w flag modifies the Disabled key as appropriate. It's best to let launchctl handle this, as the location where the config files are stored has changed a bit between OS versions.
+
+
 ## Node.JS
 
 ### peripherals
