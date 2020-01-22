@@ -1,5 +1,9 @@
 # Bash
 
+##debugger
+
+http://bashdb.sourceforge.net/
+
 ## Print active shell interpreter in a terminal window with current process placeholder $0
 
 echo $0
