@@ -2,10 +2,20 @@
 
 ## Simctl
 
-### get a list of instantiated simulators. Actually running simulators will be marked as (booted in the list). Identify the UUID for the simulator that you want to use from the list
+### get a list of all simulators. Actually running simulators will be marked as (booted in the list). Identify the UUID for the simulator that you want to use from the list
 
-xcrun simctl list 
+xcrun simctl list
 
+#### filter names of booted simulators in seperated lines
+
+```
+#!/bin/bash
+
+cd;
+xcrun simctl list | grep Booted | while read i;
+do echo "${i:0:$((${#i} - 48))}"; # remove last 48 chars from string and print
+done;
+```
 
 ### kill all devices
 
