@@ -1,6 +1,6 @@
 # Bash
 
-##debugger
+## debugger
 
 http://bashdb.sourceforge.net/
 
