@@ -12,7 +12,7 @@ xcrun simctl list
 #!/bin/bash
 
 cd;
-xcrun simctl list | grep Booted | while read i;
+xcrun simctl list -v devices | grep Booted | while read i;
 do echo "${i:0:$((${#i} - 48))}"; # remove last 48 chars from string and print
 done;
 ```
