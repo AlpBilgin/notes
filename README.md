@@ -135,16 +135,6 @@ https://docs.bitnami.com/installer/apps/testlink/configuration/configure-smtp/
 -`docker-compose down`, `docker-compose up -d`
 - check website to see if it still works
 
-## BASH
-
-### Print active shell interpreter in a terminal window with name of current process placeholder $0
-
-echo $0
-
-### print status code of last command
-
-echo $?
-
 ## Spring boot
 
 Override default test properties through a side channel.
