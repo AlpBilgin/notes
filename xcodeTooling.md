@@ -4,7 +4,7 @@
 
 ### get a list of all simulators. Actually running simulators will be marked as (booted in the list). Identify the UUID for the simulator that you want to use from the list
 
-xcrun simctl list
+`xcrun simctl list`
 
 #### filter names of booted simulators in seperated lines
 
