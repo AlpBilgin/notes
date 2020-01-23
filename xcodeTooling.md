@@ -8,7 +8,7 @@ xcrun simctl list
 
 #### filter names of booted simulators in seperated lines
 
-```
+```sh
 #!/bin/bash
 
 cd;
