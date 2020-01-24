@@ -78,11 +78,15 @@ https://developer.android.com/studio/run/emulator-commandline
 
 ### ADB
 
+#### List running emulator instances
+
+`adb devices`
+
 #### How to kill a single emulator
 
 adb emu kill
 
-#### How to kill a specific emulator when multiple are open
+#### How to kill a specific emulator instance when multiple are open
 
 adb -s emulator-5554 emu kill
 
@@ -92,7 +96,10 @@ adb -s emulator-5554 emu kill
 
 emulator @Nexus_5X_API_28 -wipe-data 
 
-#### to get a list of available devices
+#### to get a list of available images
+
 >$~/Library/Android/sdk/tools/emulator -list-avds
+
 #### this should take a string selected from the output of the command above
+
 >$~/Library/Android/sdk/tools/emulator -avd <avdName>
