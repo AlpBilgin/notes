@@ -102,7 +102,7 @@ done
 
 #### start-up with a clean memory
 
-emulator @Nexus_5X_API_28 -wipe-data 
+emulator @Nexus_5X_API_28 -wipe-data (-avd Nexus_5X_API_28 also works)
 
 #### to get a list of available images
 
