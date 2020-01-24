@@ -80,7 +80,7 @@ https://developer.android.com/studio/run/emulator-commandline
 
 #### List running emulator instances
 
-`adb devices`
+`adb devices | grep "emulator-"`
 
 #### How to kill a single emulator
 
@@ -89,6 +89,14 @@ adb emu kill
 #### How to kill a specific emulator instance when multiple are open
 
 adb -s emulator-5554 emu kill
+
+#### loop this command
+
+```sh
+adb devices | grep "emulator-" | while read -r emulator device; do # get list of detected devices, filter emulators, assign emu name to emulator variable and rest of output to device variable
+  adb -s $emulator emu kill
+done
+```
 
 ### Emulator
 
