@@ -13,7 +13,10 @@
 
 cd;
 xcrun simctl list -v devices | grep Booted | while read i;
-do echo "${i:0:$((${#i} - 48))}"; # remove last 48 chars from string and print calculates last position from string length and length of substring to be cut off
+do CURRENT_DEVICE="${i:$((${#i} - 46)):36}"; # extract 36 long substring beginning in -46 position which should be UUID
+xcrun simctl shutdown "$CURRENT_DEVICE";
+xcrun simctl erase "$CURRENT_DEVICE";
+xcrun simctl boot "$CURRENT_DEVICE";
 done;
 ```
 
