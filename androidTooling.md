@@ -90,12 +90,22 @@ adb emu kill
 
 adb -s emulator-5554 emu kill
 
-#### loop this command
+loop this command like the following for multiple devices
 
 ```sh
 adb devices | grep "emulator-" | while read -r emulator device; do # get list of detected devices, filter emulators, assign emu name to emulator variable and rest of output to device variable
   adb -s $emulator emu kill
 done
+```
+
+#### query boot status of an emulator
+
+
+`adb shell getprop init.svc.bootanim` OR `adb shell getprop sys.boot_completed` gets you the state
+use -s DEVICENAME in case of multi emulators
+loop like the following to wait on boot
+```sh
+while [ "`adb shell getprop sys.boot_completed | tr -d '\r' `" != "1" ] ; do sleep 1; done
 ```
 
 ### Emulator
