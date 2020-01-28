@@ -59,9 +59,12 @@ It's really difficult to get multiple arguments working properly in the scenario
 
 gnome-terminal -e "vim $(printf "%q " "$@")"
 
-###
+### if conditional evaluators
 \[] vs. \[\[]]
  	
 
 Contrary to \[, \[\[ prevents word splitting of variable values. So, if VAR="var with spaces", you do not need to double quote $VAR in a test - eventhough using quotes remains a good habit. Also, \[\[ prevents pathname expansion, so literal strings with wildcards do not try to expand to filenames. Using \[\[, == and != interpret strings to the right as shell glob patterns to be matched against the value to the left, for instance: \[\[ "value" == val* ]].
 
+### file descriptor 5
+
+Using file descriptor 5 might cause problems. When Bash creates a child process, as with exec, the child inherits fd 5 (see Chet Ramey's archived e-mail, SUBJECT: RE: File descriptor 5 is held open). Best leave this particular fd alone.
