@@ -12,12 +12,15 @@
 #!/bin/bash
 
 cd;
-xcrun simctl list -v devices | grep Booted | while read i;
-do CURRENT_DEVICE="${i:$((${#i} - 46)):36}"; # extract 36 long substring beginning in -46 position which should be UUID
+IFS=$'\n'; # for likes to split strings into items by IFS, to process the string line by line it is necessary to reduce IFS to \n
+for i in $(xcrun simctl list -v devices | grep Booted); do
+CURRENT_DEVICE="${i:$((${#i} - 47)):36}"; # extract 36 long substring beginning in -46 position which should be UUID
 xcrun simctl shutdown "$CURRENT_DEVICE";
 xcrun simctl erase "$CURRENT_DEVICE";
 xcrun simctl boot "$CURRENT_DEVICE";
 done;
+unset IFS;
+
 ```
 
 ### kill all devices
