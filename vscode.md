@@ -9,3 +9,8 @@ To avoid the issue, set remote.WSL.fileWatcher.polling to true. However, polling
 For large workspace you want to increase the polling interval: remote.WSL.fileWatcher.pollingInterval and control the folders that are watched: files.watcherExclude.
 
 WSL 2 does not have that file watcher problem is also not affected by the new setting.
+
+
+## Extensıons
+
+https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode
