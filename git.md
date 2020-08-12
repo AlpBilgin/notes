@@ -59,3 +59,12 @@ add a new .gitignore file in an empty directory to commit it while ignoring the 
 git diff-index --quiet HEAD || git commit -m "Jenkins automatic update commit"
 
 second command is only reached if first command spits out a difference
+
+## from SO
+
+1
+
+ignore commited files
+
+add to .gitignore
+git -rm --cached /path/to/file
