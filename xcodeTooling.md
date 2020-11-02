@@ -1,3 +1,7 @@
+# Get Xcode
+
+https://developer.apple.com/download/more/
+
 # xcrun
 
 ## Simctl
