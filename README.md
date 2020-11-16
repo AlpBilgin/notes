@@ -6,7 +6,7 @@ Read sibling sections for tips on the listed tools
 
 ### Terminal Emulator
 
-NTFS: cmder vanilla
+NTFS: cmder vanilla || git bash
 Posix: zsh + oh-my-zsh powerlevel9k theme
 
 ### Node-npm
@@ -16,7 +16,7 @@ Posix: zsh + oh-my-zsh powerlevel9k theme
  `npm config set prefix '~/.npm-global'` to set it as new global install prefix
  export it to environment `export PATH=~/.npm-global/bin:$PATH`
  2
- install pnpm. Then use pnpm to install n. Use npm only when switching to an older node where n breaks pnpm.
+ install pnpm. Then use pnpm to install n. Use npm only when something breaks, pnpm will never be 100% there
 3
 node-gyp needs python 2.7 somewhere in the environment
 
@@ -24,7 +24,7 @@ MSB error=>  https://visualstudio.microsoft.com/downloads/#build-tools-for-visua
 
 ### Python
 
-Read up again on the python package that exposes different versions per project.
+Read up again on the python package (py-env?) that exposes different versions per project.
 
 ### Git
 1 setup identity
