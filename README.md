@@ -24,6 +24,10 @@ MSB error=>  https://visualstudio.microsoft.com/downloads/#build-tools-for-visua
 
 ### Python
 
+Get python form official channels.
+
+Disregard best practices, get 2.7 too even if you have to manually install. Make sure python link points to 3.x.
+
 Read up again on the python package (py-env?) that exposes different versions per project.
 
 ### Git
