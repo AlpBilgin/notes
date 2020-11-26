@@ -10,14 +10,22 @@ NTFS: cmder vanilla || git bash
 Posix: zsh + oh-my-zsh powerlevel9k theme
 
 ### Node-npm
- 1
- `npm prefix -g` to see current global install prefix
- `mkdir ~/.npm-global` to create a new root for global node_modules
- `npm config set prefix '~/.npm-global'` to set it as new global install prefix
- export it to environment `export PATH=~/.npm-global/bin:$PATH`
- 2
- install pnpm. Then use pnpm to install n. Use npm only when something breaks, pnpm will never be 100% there
-3
+#### 1
+ - `npm prefix -g` to see current global npm install prefix
+ - `mkdir ~/.npm-global` to create a new root for global node_modules
+ - `npm config set prefix '~/.npm-global'` to set it as new global install prefix
+ - export it to environment `export PATH=~/.npm-global/bin:$PATH`
+ #### 2
+ - install pnpm it is an npm compatible package manager and actually is better made. Then use pnpm to install n. N will manage node installations for you
+ - add the following to bashrc or profile or whatever weirdness your distro requires to install managed nodes in userspace.
+ - `export N_PREFIX=$HOME/.n` to set it as new global n install prefix
+ - `export PATH=$N_PREFIX/bin:$PATH` make the path available to bash
+
+There is a dead node / npm installation somewhere in OS managed folders. I suggest that you leave them alone. If dependency management fails you can use them to bootstrap again.
+
+Use npm when something breaks with pnpm, pnpm will never be 100% there
+
+#### 3
 node-gyp needs python 2.7 somewhere in the environment
 
 MSB error=>  https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017 ; npm config set msvs_version 2017 --global
