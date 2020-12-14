@@ -19,4 +19,3 @@ The -P flag is for displaying raw port numbers instead of resolved names like ht
 To kill the PID:
 
 sudo kill -9 <PID>
-# kill -9 60401
