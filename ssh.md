@@ -13,16 +13,20 @@
 
 ## Terminal generic
 
-###generate new key, github default
+### generate new key, github default
 
 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
 id_rsa.pub is the password to register with servers
 
-###when working with bare metal servers, programmatically send add your ssh key to server that you can access
+### when working with bare metal servers, programmatically send add your ssh key to server that you can access
 
 `cat ~/.ssh/id_rsa.pub | ssh username@server.dreamhost.com "cat >> ~/.ssh/authorized_keys"`
 
 you may have to add a mkdir in the quotes to create the .ssh dir.
+
+### remove outdated keys MAKE SURE TARGET SERVER IS NOT COMPROMISED
+
+ssh-keygen -f "/home/<username>/.ssh/known_hosts" -R "hostname|ip"
 
 ## Linux
 
