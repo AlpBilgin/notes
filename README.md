@@ -4,6 +4,10 @@
 
 Read sibling sections for tips on the listed tools
 
+### SDKMAN
+
+for 'nix systems using sdkman should override the instructions below if possible.
+
 ### Terminal Emulator
 
 NTFS: cmder vanilla || git bash
