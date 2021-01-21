@@ -8,3 +8,6 @@ sdk install java will install latest java
 sdk install java {id} will install a specific java
 sdk list java will list installable java ids
 sdk list will list everything. 
+
+
+it is also good for other sdks
