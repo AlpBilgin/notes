@@ -4,6 +4,10 @@
 
 Read sibling sections for tips on the listed tools
 
+### Vysor
+an android mirroring app
+https://www.vysor.io/
+
 ### SDKMAN
 
 for 'nix systems using sdkman should override the instructions below if possible.
