@@ -38,6 +38,8 @@ node-gyp needs python 2.7 somewhere in the environment
 
 MSB error=>  https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017 ; npm config set msvs_version 2017 --global
 
+The builds tools for v140 (Platform Toolset = 'v140') cannot be found. To build using the v140 build tools, either click the Project menu or right-click the solution, and then select "Update VC++ Projects...". Install v140 to build using the v140 build tools.
+
 ### Python
 
 Get python form official channels.
