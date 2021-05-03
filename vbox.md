@@ -16,7 +16,7 @@ Guest Port: whatever port your guest machine is listening for ssh requests on, i
 
 Now you should be able to ssh into your local VM! If you’re working in a terminal on your host machine, you may login to your guest machine using:
 
-[host]$ ssh -p <host-port> <username>@localhost
+[host]$ ssh -p (host-port) (remote-username)@localhost
 The -p flag tells the ssh client to connect to the specified port
 The username should be whatever you set up your local VM with
 We login to localhost because we’re just connecting to our local machine
