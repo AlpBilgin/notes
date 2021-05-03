@@ -1,5 +1,9 @@
 # Server Side
 
+install openssh in linux, sudo apt install openssh-server
+check if it runs sudo systemctl status ssh
+ ubuntu:: sudo ufw allow ssh to puch hole in firewall
+
 ## Terminal generic
 
 ## MacOS
