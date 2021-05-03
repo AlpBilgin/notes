@@ -1,10 +1,15 @@
 # Server Side
 
+
+
+## Terminal generic
+ssh-copy-id -i ~/.ssh/id_rsa.pub YOUR_REMOTE_USER_NAME@IP_ADDRESS_OF_THE_SERVER to send sh key
+
+##ubuntu
+
 install openssh in linux, sudo apt install openssh-server
 check if it runs sudo systemctl status ssh
  ubuntu:: sudo ufw allow ssh to puch hole in firewall
-
-## Terminal generic
 
 ## MacOS
 
