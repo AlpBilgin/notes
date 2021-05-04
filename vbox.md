@@ -20,3 +20,17 @@ Now you should be able to ssh into your local VM! If you’re working in a termi
 The -p flag tells the ssh client to connect to the specified port
 The username should be whatever you set up your local VM with
 We login to localhost because we’re just connecting to our local machine
+
+
+## forward webcam
+
+install Oracle VM VirtualBox Extension Pack
+
+see which webcams are visible:  VBoxManage list webcams
+
+copy the pointer to the webcam of your choice. (it is a long alphanumeric pathlike)
+
+start VM
+
+VBoxManage controlvm <image_name> webcam attach <path_to_webcam>
+
