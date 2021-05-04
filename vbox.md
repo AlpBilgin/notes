@@ -30,7 +30,9 @@ see which webcams are visible:  VBoxManage list webcams
 
 copy the pointer to the webcam of your choice. (it is a long alphanumeric pathlike)
 
+"\\?\usb<GUID>\global"
+
 start VM
 
-VBoxManage controlvm <image_name> webcam attach <path_to_webcam>
+VBoxManage controlvm "<image_name>" webcam attach "<path_to_webcam>"
 
