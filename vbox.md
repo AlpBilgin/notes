@@ -36,3 +36,8 @@ start VM
 
 VBoxManage controlvm "<image_name>" webcam attach "<path_to_webcam>"
 
+make a ps1 script with the following
+
+VBoxManage startvm lubuntu
+VBoxManage controlvm lubuntu webcam attach "\\?\usb#vid_5986&pid_9106&mi_00#6&20de34d0&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global"
+
