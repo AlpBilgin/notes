@@ -1,4 +1,6 @@
-.\VBoxManage.exe guestproperty get <device_name> "/VirtualBox/GuestInfo/Net/0/V4/IP"
+VBoxManage guestproperty enumerate <vmname> => to get all props
+
+.\VBoxManage.exe guestproperty get <device_name> "/VirtualBox/GuestInfo/Net/0/V4/IP" => to get IP specifically
 
 ## forward port to host port
 
