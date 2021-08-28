@@ -1,0 +1,19 @@
+sudo apt-get install mariadb-server mariadb-client
+
+ mysql_secure_installation
+
+
+ cd /etc/mysql
+$ sudo mkdir ssl
+$ cd ssl
+
+Note: Common Name value used for the server and client certificates/keys must each differ from the Common Name value used for the CA certificate. To avoid any issues, I am setting them as follows. Otherwise, you will get certification verification failed error. Hence set it as follows:
+CA common Name : MariaDB admin
+Server common Name: MariaDB server
+Client common Name: MariaDB client
+
+sudo openssl genrsa 4096 > ca-key.pem
+
+ sudo openssl req -new -x509 -nodes -days 365000 -key ca-key.pem -out ca-cert.pem
+
+read the rest in  https://www.cyberciti.biz/faq/how-to-setup-mariadb-ssl-and-secure-connections-from-clients/
