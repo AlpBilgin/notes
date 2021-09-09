@@ -44,3 +44,19 @@ ssh-keygen -f "/home/<username>/.ssh/known_hosts" -R "hostname|ip"
 
 `ssh-copy-id -i ~/.ssh/id_rsa.pub username@serverurl`
 
+ ## config file
+
+ ### juggling multiple github accounts
+you can assign multiple aliases to the same user@host pair to login with different keys. This is great for multiple parallel github accounts
+ ```
+Host github-acc1
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_acc1
+Host github-acc2
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_acc2
+ ```
+
+
