@@ -68,6 +68,24 @@ ignore commited files
 
 add to .gitignore
 git -rm --cached /path/to/file
+  
+2
+  https://stackoverflow.com/questions/56490194/vs-code-bitbucket-ssh-permission-denied-publickey
+  
+  Windows 10 allows using all default OpenSSH tools. However, git was throwing permission denied for every time when I tried to clone repositories from Github, Gitlab or Bitbucket over SSH. You need to perform a few tweaks to make it work.
+
+Make sure ssh-agent service enabled, or run in Powershell (as administrator):
+Get-Service -Name ssh-agent | Set-Service -StartupType Manual
+
+ssh-agent
+ssh-add
+git config --global core.sshCommand C:/Windows/System32/OpenSSH/ssh.exe
+  
+  OR
+
+the issue was resolved for me by using Windows Secure Channel library for HTTPS connections.
+https://i.stack.imgur.com/nz32w.png
+
 
 ## From GISTS
 
