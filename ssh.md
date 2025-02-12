@@ -12,6 +12,8 @@ check if it runs sudo systemctl status ssh
 systemctl start ssh to start
  ubuntu:: sudo ufw allow ssh to puch hole in firewall
 
+ see logs:  sudo journalctl -u ssh -f
+
 ## MacOS
 
 - /private/etc/ssh/ is where you find the important OS wide settings
